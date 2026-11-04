@@ -1,0 +1,49 @@
+% incl/misc/frontpage.tex : document front page
+% ------------------------------------------------------------------------------
+
+\pdfbookmark[0]{Front page}{frontpage}
+\begin{titlepage}
+  \centering
+  \phantom{}
+  %\vspace{2cm}
+
+  % Main contents
+{\fontfamily{bch}\selectfont 
+\fboxsep=16pt % padding 
+\fboxrule=0.8pt % border thickness 
+\fcolorbox{AAUblue1}{white}{
+     \begin{minipage}{0.95\textwidth} 
+        \centering 
+        \color{AAUblue1} 
+        
+        \vspace{2em} 
+        {\Huge\bfseries\projecttitle} 
+        
+        \bigskip 
+        {\Large\bfseries\projectsubtitle} 
+        
+        \bigskip 
+        \parbox{\textwidth}{\centering\large\projectauthors} 
+        
+        \bigskip 
+        {\bfseries\large 
+        \projectnumber\ Project, 
+        Group \projectgroup, 
+        \projectdegree 
+        } 
+        
+        \vspace{2em} 
+    \end{minipage} 
+    } 
+}
+  % AAU badge
+  \vspace{1cm}
+  \begin{minipage}[c]{0.5\paperwidth}
+    \centering
+    \makebox[0pt]{
+      \input{fig/tikz/aau-badge}
+    }
+  \end{minipage}
+
+
+\end{titlepage}
