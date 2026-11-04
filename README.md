@@ -181,7 +181,6 @@ All the commands below are defined in [`incl/pre/cmds.tex`](incl/pre/cmds.tex), 
 | Command | Expansion | Example |
 |---|---|---|
 | `\tw{...}` | `\textcolor{white}{...}` | $\textcolor{white}{\text{hidden on blue}}$ |
-| `\phm` | `\phantom{-}` | $\phantom{-}x$ |
 | `\Tophat{z}` | `\hat{z}` | $\hat{\theta}$ |
 | `\ti{x}` | `\widetilde{x}` | $\widetilde{X}$ |
 | `\a` | `\alpha` | $\alpha+\varepsilon$ |
@@ -234,7 +233,7 @@ All the commands below are defined in [`incl/pre/cmds.tex`](incl/pre/cmds.tex), 
 | `\t` | `\bm{t}` | $\bm{t}$ |
 | `\0` | `\bm{0}` | $\bm{0}$ |
 | `\om` | `\bm{\omega}` | $\bm{\omega}$ |
-| `\norm{z}` | `\left\lVert z\right\rVert` | $\left\lVert\bm{x}\right\rVert$ |
+| `\norm{z}` | `\left\lVert z\right\rVert` | $\left\lVert z\right\rVert$ |
 | `\fnorm{A}` | `\left\lVert A\right\rVert_F` | $\left\lVert A\right\rVert_F$ |
 | `\ip{x}` | `\left\langle x\right\rangle` (one argument) | $\left\langle\bm{x}\right\rangle$ |
 | `\vecto{a}{b}` | Two-row column vector using `bmatrix` | $\begin{bmatrix}a\\b\end{bmatrix}$ |
