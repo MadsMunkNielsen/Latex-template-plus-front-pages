@@ -178,79 +178,92 @@ All the commands below are defined in [`incl/pre/cmds.tex`](incl/pre/cmds.tex), 
 
 ### Mathematical notation and operators
 
-| Command | Output / role | Example |
+| Command | Expansion | Example |
 |---|---|---|
-| `\tw{...}` | White text via `\textcolor{white}{...}` | `\tw{hidden on blue}` |
-| `\phm` | Width-preserving invisible minus sign, `\phantom{-}` | `$\phm x$` |
-| `\Tophat{z}` | Hatted variable, `\hat{z}` | `$\Tophat{\theta}$` |
-| `\ti{x}` | Tilde accent, `\widetilde{x}` | `$\ti{X}$` |
-| `\a`, `\epsi` | `\alpha`, `\varepsilon` | `$\a+\epsi$` |
-| `\gets` | Assignment symbol `:=` (redefines the normal `\gets` arrow) | `$x\gets 1$` |
-| `\trk` | Gradient symbol `\nabla` | `$\trk f$` |
-| `\m`, `\*` | Multiplication dot `\cdot` | `$a\m b$` |
-| `\bigO`, `\BO` | Calligraphic big-O `\mathcal{O}` | `$\bigO(n^2)$` |
-| `\ud` | Literal differential element `\,\mathrm{d}x` | `$\int f(x)\ud$` |
-| `\e` | Roman letter e (`\text{e}`) | `$\e^x$` |
-| `\PP` | Text `P` | `$\PP(A)$` |
-| `\Sym`, `\Isom`, `\rank` | Text operators `Sym`, `Isom`, `rank` | `$\rank(A)$` |
-| `\tr{A}` | Trace as `\text{tr}(A)` | `$\tr{A}$` |
-| `\var` | Lowercase text `var` | `$\var(X)$` |
-| `\indep`, `\independent` | Two definitions of a statistical-independence symbol | `$X\indep Y$` |
-| `\checkmark` | Custom TikZ tick mark (overrides the standard checkmark) | `$\checkmark$` |
-
+| `\tw{...}` | `\textcolor{white}{...}` | $\textcolor{white}{\text{hidden on blue}}$ |
+| `\phm` | `\phantom{-}` | $\phantom{-}x$ |
+| `\Tophat{z}` | `\hat{z}` | $\hat{\theta}$ |
+| `\ti{x}` | `\widetilde{x}` | $\widetilde{X}$ |
+| `\a` | `\alpha` | $\alpha+\varepsilon$ |
+| `\epsi` | `\varepsilon` | $\varepsilon > 0$ |
+| `\gets` | `:=` (redefines the standard `\gets` arrow) | $x:=1$ |
+| `\trk` | `\nabla` | $\nabla f$ |
+| `\m`, `\*` | `\cdot` | $a\cdot b$ |
+| `\bigO`, `\BO` | `\mathcal{O}` | $\mathcal{O}(n^2)$ |
+| `\ud` | `\,\mathrm{d}x` | $\int f(x)\,\mathrm{d}x$ |
+| `\e` | `\text{e}` | $\text{e}^x$ |
+| `\PP` | `\text{P}` | $\text{P}(A)$ |
+| `\Sym` | `\text{Sym}` | $\text{Sym}(V)$ |
+| `\Isom` | `\text{Isom}` | $\text{Isom}(V,W)$ |
+| `\rank` | `\text{rank}` | $\text{rank}(A)$ |
+| `\tr{A}` | `\text{tr}(A)` | $\text{tr}(A)$ |
+| `\var` | `\text{var}` | $\text{var}(X)$ |
+| `\indep` | `\perp \!\!\! \perp` | $X\perp\!\!\!\perp Y$ |
 
 
 ### Blackboard bold, calligraphic sets, and spaces
 
-| Commands | Expansion |
-|---|---|
-| `\R`, `\F`, `\C`, `\Z`, `\N`, `\ML`, `\K`, `\Q` | `\mathbb{R}`, `\mathbb{F}`, `\mathbb{C}`, `\mathbb{Z}`, `\mathbb{N}`, `\mathbb{L}`, `\mathbb{K}`, `\mathbb{Q}` |
-| `\disneyd`, `\Lag`, `\E`, `\M`, `\T`, `\A`, `\cp` | `\mathcal{D}`, `\mathcal{L}`, `\mathcal{E}`, `\mathcal{M}`, `\mathcal{T}`, `\mathcal{A}`, `\mathcal{P}` |
-| `\NA` | `\mathcal{N}_A` |
-
-
+| Command | Expansion | Example |
+|---|---|---|
+| `\R` | `\mathbb{R}` | $\mathbb{R}$ |
+| `\F` | `\mathbb{F}` | $\mathbb{F}$ |
+| `\C` | `\mathbb{C}` | $\mathbb{C}$ |
+| `\Z` | `\mathbb{Z}` | $\mathbb{Z}$ |
+| `\N` | `\mathbb{N}` | $\mathbb{N}$ |
+| `\ML` | `\mathbb{L}` | $\mathbb{L}$ |
+| `\K` | `\mathbb{K}` | $\mathbb{K}$ |
+| `\Q` | `\mathbb{Q}` | $\mathbb{Q}$ |
+| `\disneyd` | `\mathcal{D}` | $\mathcal{D}$ |
+| `\Lag` | `\mathcal{L}` | $\mathcal{L}$ |
+| `\E` | `\mathcal{E}` | $\mathcal{E}$ |
+| `\M` | `\mathcal{M}` | $\mathcal{M}$ |
+| `\T` | `\mathcal{T}` | $\mathcal{T}$ |
+| `\A` | `\mathcal{A}` | $\mathcal{A}$ |
+| `\cp` | `\mathcal{P}` | $\mathcal{P}$ |
+| `\NA` | `\mathcal{N}_A` | $\mathcal{N}_A$ |
 ### Vectors, norms, and products
 
-| Commands | Expansion / role |
-|---|---|
-| `\x`, `\y`, `\v`, `\w`, `\u`, `\b`, `\t` | Bold vectors `\bm{x}`, `\bm{y}`, `\bm{v}`, `\bm{w}`, `\bm{u}`, `\bm{b}`, `\bm{t}` |
-| `\0` | Bold zero `\bm{0}` |
-| `\om` | Bold omega `\bm{\omega }` |
-| `\norm{z}` | `\left\lVert z\right\rVert` |
-| `\fnorm{A}` | `\left\lVert A\right\rVert_F` |
-| `\ip{x}` | `\left\langle x\right\rangle` (one argument; not a two-argument inner-product macro) |
-| `\vecto{a}{b}` | 2-row column vector, `bmatrix` |
-| `\vectre{a}{b}{c}` | 3-row column vector, `bmatrix` |
-| `\prik` | Custom reduced-size centered bullet (dot-product symbol) |
-
-
-
+| Command | Expansion | Example |
+|---|---|---|
+| `\x` | `\bm{x}` | $\bm{x}$ |
+| `\y` | `\bm{y}` | $\bm{y}$ |
+| `\v` | `\bm{v}` | $\bm{v}$ |
+| `\w` | `\bm{w}` | $\bm{w}$ |
+| `\u` | `\bm{u}` | $\bm{u}$ |
+| `\b` | `\bm{b}` | $\bm{b}$ |
+| `\t` | `\bm{t}` | $\bm{t}$ |
+| `\0` | `\bm{0}` | $\bm{0}$ |
+| `\om` | `\bm{\omega}` | $\bm{\omega}$ |
+| `\norm{z}` | `\left\lVert z\right\rVert` | $\left\lVert\bm{x}\right\rVert$ |
+| `\fnorm{A}` | `\left\lVert A\right\rVert_F` | $\left\lVert A\right\rVert_F$ |
+| `\ip{x}` | `\left\langle x\right\rangle` (one argument) | $\left\langle\bm{x}\right\rangle$ |
+| `\vecto{a}{b}` | Two-row column vector using `bmatrix` | $\begin{bmatrix}a\\b\end{bmatrix}$ |
+| `\vectre{a}{b}{c}` | Three-row column vector using `bmatrix` | $\begin{bmatrix}a\\b\\c\end{bmatrix}$ |
+| `\prik` | Custom reduced-size centred bullet using `\mathbin` and `\mathpalette` | $a\mathbin{\bullet}b$ |
 
 ### Fixed derivatives and specialized variable shortcuts
 
-
-| Command | Expansion |
-|---|---|
-| `\df` | `\frac{\partial f}{\partial x}` |
-| `\dx` | $\frac{d x}{d t}$ |
-| `\Dt` | `\frac{\mathrm{d}x}{\mathrm{d}t}(t)` |
-| `\D` | `\frac{\mathrm{d}x}{\mathrm{d}t}` |
-| `\Dx` | `\frac{\mathrm{d}X}{\mathrm{d}t}` |
-| `\DP` | `\frac{\mathrm{d}\Phi}{\mathrm{d}t}` |
-| `\Dp` | `\frac{\mathrm{d}\phi}{\mathrm{d}t}` |
-| `\Dif{z}` | `\frac{\mathrm{d} z}{\mathrm{d}t}` |
-| `\xt` | `\widetilde{x}_{\tau}^\ast` |
-| `\xu` | `x_{\tau}^\ast` |
-| `\xtan` | `\widetilde{x}^{\phantom{}TAN}` |
+| Command | Expansion | Example |
+|---|---|---|
+| `\df` | `\frac{\partial f}{\partial x}` | $\frac{\partial f}{\partial x}$ |
+| `\dx` | `\frac{d x}{d t}` | $\frac{dx}{dt}$ |
+| `\Dt` | `\frac{\mathrm{d}x}{\mathrm{d}t}(t)` | $\frac{\mathrm{d}x}{\mathrm{d}t}(t)$ |
+| `\D` | `\frac{\mathrm{d}x}{\mathrm{d}t}` | $\frac{\mathrm{d}x}{\mathrm{d}t}$ |
+| `\Dx` | `\frac{\mathrm{d}X}{\mathrm{d}t}` | $\frac{\mathrm{d}X}{\mathrm{d}t}$ |
+| `\DP` | `\frac{\mathrm{d}\Phi}{\mathrm{d}t}` | $\frac{\mathrm{d}\Phi}{\mathrm{d}t}$ |
+| `\Dp` | `\frac{\mathrm{d}\phi}{\mathrm{d}t}` | $\frac{\mathrm{d}\phi}{\mathrm{d}t}$ |
+| `\Dif{z}` | `\frac{\mathrm{d}z}{\mathrm{d}t}` | $\frac{\mathrm{d}z}{\mathrm{d}t}$ |
+| `\xt` | `\widetilde{x}_{\tau}^{\ast}` | $\widetilde{x}_{\tau}^{\ast}$ |
+| `\xu` | `x_{\tau}^{\ast}` | $x_{\tau}^{\ast}$ |
 
 
 ### Probability and statistics
 
 | Command | Expansion | Example |
 |---|---|---|
-| `\Var{X}` | `\text{Var}\left[{X}\right]` | `$\Var{X}$` |
-| `\Cov{X,Y}` | `\text{Cov}\left[{X,Y}\right]` | `$\Cov{X,Y}$` |
-| `\Ex{X}` | `\text{E}\left[{X}\right]` | `$\Ex{X}$` |
+| `\Var{X}` | `\text{Var}\left[{X}\right]` | $\text{Var}\left[X\right]$ |
+| `\Cov{X,Y}` | `\text{Cov}\left[{X,Y}\right]` | $\text{Cov}\left[X,Y\right]$ |
+| `\Ex{X}` | `\text{E}\left[{X}\right]` | $\text{E}\left[X\right]$ |
 
 
 ## Theorems and custom environments
