@@ -232,7 +232,7 @@ All the commands below are defined in [`incl/pre/cmds.tex`](incl/pre/cmds.tex), 
 | Command | Expansion |
 |---|---|
 | `\df` | `\frac{\partial f}{\partial x}` |
-| `\dx` | `\frac{d x}{d t}` |
+| `\dx` | $\frac{d x}{d t}$ |
 | `\Dt` | `\frac{\mathrm{d}x}{\mathrm{d}t}(t)` |
 | `\D` | `\frac{\mathrm{d}x}{\mathrm{d}t}` |
 | `\Dx` | `\frac{\mathrm{d}X}{\mathrm{d}t}` |
